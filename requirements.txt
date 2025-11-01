@@ -1,0 +1,16 @@
+# OBS WebSocket Client
+obs-websocket-py>=1.6.0
+
+# Computer Vision and Image Processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Video Processing
+ffmpeg-python>=0.2.0
+
+# Configuration Management
+python-dotenv>=1.0.0
+
+# Utilities
+python-dateutil>=2.8.2
+
