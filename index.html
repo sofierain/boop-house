@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boop House - Automatic clip generation from livestreams based on motion detection. Collaborate with content creators for streamlined clip farming and content production.">
+    <meta name="keywords" content="livestream, OBS, motion detection, clip generation, content creation, streaming, video editing, automated clips">
+    <meta name="author" content="Boop House">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sofierain.github.io/boop-house/">
+    <meta property="og:title" content="Boop House - Automatic Livestream Clip Generation">
+    <meta property="og:description" content="Automatically generate clips from livestreams based on pixel motion detection. Perfect for content creators.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sofierain.github.io/boop-house/">
+    <meta property="twitter:title" content="Boop House - Automatic Livestream Clip Generation">
+    <meta property="twitter:description" content="Automatically generate clips from livestreams based on pixel motion detection. Perfect for content creators.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sofierain.github.io/boop-house/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Boop House",
+      "description": "Automatic clip generation from livestreams based on pixel motion detection",
+      "url": "https://sofierain.github.io/boop-house/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Cross-platform",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "OBS Studio Integration",
+        "Intelligent Motion Detection",
+        "Automatic Clip Generation",
+        "Real-time Processing",
+        "Configurable Thresholds"
+      ]
+    }
+    </script>
+    
+    <title>Boop House - Automatic Livestream Clip Generation</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .cta a:hover {
+            text-decoration: underline;
+        }
+        
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Boop House</h1>
+            <p class="tagline">Automatic clip generation from livestreams based on motion detection</p>
+            <div class="links">
+                <a href="https://github.com/sofierain/boop-house">View on GitHub</a>
+                <a href="https://github.com/sofierain/boop-house/blob/main/README.md">Documentation</a>
+                <a href="https://github.com/sofierain/boop-house/issues">Report Issue</a>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <section class="section">
+                <h2>Overview</h2>
+                <p>Boop House is an ambitious live streaming collaboration platform that automatically generates clips from livestreams based on pixel motion detection. Designed for content creators to streamline clip farming and content production workflows.</p>
+                <p>The system connects to OBS Studio to monitor livestreams in real-time, detects moments of high pixel motion variation (indicating interesting content), automatically records clips, and stops recording when motion settles.</p>
+            </section>
+            
+            <section class="section">
+                <h2>Key Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>🎥 OBS Integration</h3>
+                        <p>Seamless connection to OBS Studio via WebSocket API for real-time stream monitoring.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>👁️ Motion Detection</h3>
+                        <p>Intelligent pixel motion analysis to identify engaging moments automatically.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⚡ Auto Clips</h3>
+                        <p>Automatically triggers recording on high motion and stops when motion settles.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>💾 Smart Storage</h3>
+                        <p>Organized clip storage with metadata for easy post-production workflow.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⚙️ Configurable</h3>
+                        <p>Adjustable sensitivity thresholds for motion detection customization.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🔄 Real-time</h3>
+                        <p>Monitors streams live without significant latency or performance impact.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>How It Works</h2>
+                <ol style="padding-left: 1.5rem; line-height: 2;">
+                    <li><strong>Connection:</strong> Boop House connects to OBS Studio via WebSocket</li>
+                    <li><strong>Monitoring:</strong> Captures stream frames and analyzes pixel motion variation in real-time</li>
+                    <li><strong>Detection:</strong> When motion variation exceeds threshold, recording automatically begins</li>
+                    <li><strong>Recording:</strong> Captures the clip until motion variation settles below threshold</li>
+                    <li><strong>Output:</strong> Saves clips with metadata (timestamp, motion metrics, etc.)</li>
+                </ol>
+            </section>
+            
+            <section class="section">
+                <h2>Quick Start</h2>
+                <p>Install dependencies:</p>
+                <pre style="background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto;"><code>pip install -r requirements.txt</code></pre>
+                <p style="margin-top: 1rem;">Configure your <code>.env</code> file and run:</p>
+                <pre style="background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto;"><code>python boop_house.py</code></pre>
+            </section>
+            
+            <div class="cta">
+                <a href="https://github.com/sofierain/boop-house">Get Started on GitHub →</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Boop House. Open source project under MIT License.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
