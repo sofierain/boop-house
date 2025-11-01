@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Allow Google to index everything
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap location
+Sitemap: https://sofierain.github.io/boop-house/sitemap.xml
+
