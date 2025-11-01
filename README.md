@@ -2,6 +2,8 @@
 
 An ambitious live streaming collaboration platform that automatically generates clips from livestreams based on pixel motion detection. Designed for content creators to streamline clip farming and content production workflows.
 
+🌐 **Live Demo**: [https://sofierain.github.io/boop-house/](https://sofierain.github.io/boop-house/)
+
 ## Overview
 
 Boop House connects to OBS Studio to monitor livestreams in real-time, detects moments of high pixel motion variation (indicating interesting content), automatically records clips, and stops recording when motion settles. This enables content creators to focus on streaming while the system automatically captures highlights for later editing and distribution.
@@ -137,6 +139,9 @@ boop-house/
 ├── motion_detector.py    # Pixel motion detection engine
 ├── clip_manager.py       # Clip recording and management
 ├── config.py             # Configuration management
+├── index.html            # GitHub Pages landing page
+├── robots.txt            # SEO configuration
+├── sitemap.xml           # Site map for search engines
 └── clips/                # Output directory for generated clips
 ```
 
@@ -192,4 +197,3 @@ For issues, questions, or contributions, please open an issue on the repository.
 - OBS Project for the amazing streaming software
 - OBS WebSocket plugin developers
 - OpenCV community for motion detection algorithms
-
